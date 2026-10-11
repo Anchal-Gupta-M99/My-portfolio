@@ -459,9 +459,7 @@ body.dark-mode #contact p {
     }
 }
 
-body {
-    background-color: lightyellow !important;
-}
+
 
 #shareButton:hover {
     background-color: #1d4ed8;
