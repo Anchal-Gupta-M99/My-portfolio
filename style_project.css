@@ -1,0 +1,85 @@
+
+
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+/* Main heading */
+h1 {
+    color: darkblue;
+    font-size: 32px;
+    text-align: center;
+}
+
+h2 {
+    color: blue;
+    font-size: 24px;
+}
+
+/* College image */
+img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    float: right;
+    margin: 0 0 15px 20px;
+}
+
+/* Paragraph */
+p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Lists */
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+/* Mobile responsive design */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    img {
+        float: none;
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+}
