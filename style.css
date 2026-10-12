@@ -149,6 +149,7 @@ section {
 #projects h2,
 #educations h2,
 #contact h2 {
+   color:#1d4ed8;
     font-size: 35px;
     margin-bottom: 25px;
 }
