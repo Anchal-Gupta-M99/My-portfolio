@@ -272,30 +272,37 @@ section {
    CONTACT
 ========================= */
 
-#contact {
-    background-color: white;
-}
+#contact .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 12px 10px 0;
+    padding: 12px 22px;
 
-#contact p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-#contact a {
-    display: inline-block;
-
-    margin-right: 20px;
-
-    color: #2563eb;
+    background-color: #100962;
+    color: #0A66C2;
+    border: 2px solid #0A66C2;
+    border-radius: 10px;
 
     text-decoration: none;
-
     font-weight: bold;
+    transition: 0.3s;
 }
 
-#contact a:hover {
-    text-decoration: underline;
+#contact .linkedin-link:hover {
+    background-color: #053a73;
+    color: #004182;
+    transform: translateY(-2px);
+    text-decoration: none;
 }
+
+@media (max-width: 600px) {
+    #contact .linkedin-link {
+        margin: 8px 5px;
+        max-width: 100%;
+    }
+}
+
 
 
 /* =========================
@@ -461,6 +468,26 @@ body.dark-mode #contact p {
     body {
         overflow-x: hidden;
     }
+}
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 22px;
+    background: #170451;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.github-link:hover {
+    background: #042146;
+    color: #1d4ed8;
+    transform: translateY(-2px);
 }
 
 
