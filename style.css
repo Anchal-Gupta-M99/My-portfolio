@@ -82,7 +82,7 @@ section {
 }
 
 #home h1 {
-   color:light blue;
+   color:rgb(3,62,92);
     font-size: 50px;
     margin-bottom: 10px;
 }
@@ -94,7 +94,7 @@ section {
 }
 
 #home p {
-   color:white;
+   color:black;
     font-size: 18px;
     margin-bottom: 25px;
 }
