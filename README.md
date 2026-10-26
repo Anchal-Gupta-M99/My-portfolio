@@ -45,7 +45,7 @@ The website is designed to work on different screen sizes, including mobile phon
 
 ## 📬 Contact Me
 
-- **GitHub:** [Visit My GitHub](https://anchal-gupta-m99.github.io/College-Portal/)
+- **GitHub:** [Visit My GitHub](https://github.com/Anchal-Gupta-M99)
 - **LinkedIn:** [Visit My LinkedIn](https://www.linkedin.com/in/anchal-gupta-89a8403a6/)
 
 ---
