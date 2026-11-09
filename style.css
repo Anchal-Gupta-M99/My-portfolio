@@ -1,17 +1,12 @@
 
 /* =========================================
-   ANCHAL GUPTA - PREMIUM PORTFOLIO
-   Dark Navy + Purple + Cyan Theme
+   ANCHAL GUPTA - RESPONSIVE PORTFOLIO
+   Dark Navy + Purple + Blue + Cyan
 ========================================= */
 
-/* GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-
-/* =========================================
-   1. ROOT VARIABLES
-========================================= */
-
+/* 1. ROOT VARIABLES */
 :root {
     --bg: #070b18;
     --bg-light: #0d1428;
@@ -25,22 +20,12 @@
     --white: #ffffff;
     --text: #cbd5e1;
     --muted: #94a3b8;
-
     --border: rgba(148, 163, 184, 0.15);
 
-    --gradient: linear-gradient(
-        135deg,
-        #9333ea,
-        #3b82f6,
-        #22d3ee
-    );
+    --gradient: linear-gradient(135deg, #9333ea, #3b82f6, #22d3ee);
 }
 
-
-/* =========================================
-   2. GLOBAL STYLING
-========================================= */
-
+/* 2. GLOBAL STYLING */
 * {
     margin: 0;
     padding: 0;
@@ -60,14 +45,10 @@ body {
     overflow-x: hidden;
 }
 
-/* Custom Selection */
-
 ::selection {
     background: var(--purple);
     color: white;
 }
-
-/* Scrollbar */
 
 ::-webkit-scrollbar {
     width: 9px;
@@ -78,23 +59,16 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-        var(--purple),
-        var(--blue)
-    );
+    background: linear-gradient(var(--purple), var(--blue));
     border-radius: 20px;
 }
 
 section {
-    padding: 100px 10%;
+    padding: 100px 8%;
     position: relative;
 }
 
-
-/* =========================================
-   3. NAVIGATION BAR
-========================================= */
-
+/* 3. NAVIGATION */
 nav {
     position: sticky;
     top: 0;
@@ -103,26 +77,23 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    flex-wrap: wrap;
+    gap: 30px;
 
-    padding: 20px 5%;
-
-    background: rgba(7, 11, 24, 0.85);
+    padding: 18px 5%;
+    background: rgba(7, 11, 24, 0.88);
     backdrop-filter: blur(18px);
-
+    -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--border);
 }
 
 nav a {
     position: relative;
-
     color: var(--text);
     text-decoration: none;
-
     font-size: 14px;
     font-weight: 500;
-
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -131,58 +102,37 @@ nav a:hover {
 
 nav a::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: -7px;
-
     width: 0;
     height: 2px;
-
     background: var(--gradient);
     border-radius: 10px;
-
-    transition: 0.3s;
+    transition: width 0.3s ease;
 }
 
 nav a:hover::after {
     width: 100%;
 }
 
-
-/* =========================================
-   4. HOME / HERO SECTION
-========================================= */
-
+/* 4. HOME / HERO SECTION */
 #home {
     min-height: 90vh;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    gap: 60px;
+    gap: 45px;
 
     background:
-        radial-gradient(
-            circle at 80% 40%,
-            rgba(147, 51, 234, 0.16),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 10% 80%,
-            rgba(34, 211, 238, 0.08),
-            transparent 30%
-        );
+        radial-gradient(circle at 80% 40%, rgba(59, 130, 246, 0.16), transparent 35%),
+        radial-gradient(circle at 10% 80%, rgba(34, 211, 238, 0.08), transparent 30%);
 
     overflow: hidden;
 }
 
-
-/* HOME CONTENT */
-
 .home-content {
-    flex: 1;
+    flex: 1 1 550px;
     max-width: 650px;
 }
 
@@ -190,16 +140,9 @@ nav a:hover::after {
     font-size: clamp(35px, 5vw, 60px);
     font-weight: 800;
     line-height: 1.2;
-
     margin-bottom: 20px;
 
-    background: linear-gradient(
-        90deg,
-        #c084fc,
-        #60a5fa,
-        #22d3ee
-    );
-
+    background: linear-gradient(90deg, #c084fc, #60a5fa, #22d3ee);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -208,7 +151,6 @@ nav a:hover::after {
 .home-content h2 {
     font-size: 27px;
     color: var(--purple-light);
-
     text-align: left;
     margin-bottom: 20px;
 }
@@ -220,56 +162,42 @@ nav a:hover::after {
 .home-content p {
     color: var(--muted);
     font-size: 16px;
-
     max-width: 550px;
     margin-bottom: 35px;
 }
 
-
-/* =========================================
-   5. HERO BUTTONS
-========================================= */
-
+/* 5. HOME BUTTONS */
 .home-buttons {
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
-
     margin-bottom: 35px;
 }
 
 .primary-btn,
 .secondary-btn {
     display: inline-block;
-
     padding: 14px 28px;
-
     border-radius: 50px;
     text-decoration: none;
-
     font-size: 14px;
     font-weight: 600;
-
     transition: all 0.35s ease;
 }
 
 .primary-btn {
     color: white;
     background: var(--gradient);
-
-    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 .primary-btn:hover {
     transform: translateY(-5px);
-
-    box-shadow:
-        0 8px 30px rgba(147, 51, 234, 0.5);
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.5);
 }
 
 .secondary-btn {
     color: var(--cyan);
-
     border: 1px solid var(--cyan);
     background: rgba(34, 211, 238, 0.04);
 }
@@ -277,28 +205,22 @@ nav a:hover::after {
 .secondary-btn:hover {
     background: var(--cyan);
     color: #07111f;
-
     transform: translateY(-5px);
 }
 
-
-/* =========================================
-   6. SOCIAL LINKS
-========================================= */
-
+/* 6. SOCIAL LINKS */
 .social-links {
     display: flex;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 .social-links a {
     color: var(--text);
     text-decoration: none;
-
     font-size: 15px;
     font-weight: 500;
-
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .social-links a:hover {
@@ -306,113 +228,67 @@ nav a:hover::after {
     transform: translateY(-3px);
 }
 
-
-/* home section image  */
-/* PROFILE IMAGE - NO SHAPE */
-
+/* 7. PROFILE IMAGE
+   No circle, no border, no frame */
 .hero-image-container {
     position: relative;
+    flex: 0 1 500px;
+    width: min(500px, 42vw);
+    height: 620px;
+    min-width: 0;
 
-    flex: 0 0 330px;
-    width: 330px;
-    height: 380px;
-
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-
-    box-shadow: none;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 
     animation: floating 4s ease-in-out infinite;
 }
 
-/* ORIGINAL TRANSPARENT IMAGE */
-
-/* IMAGE SIZE */
-.hero-image-container {
-    width: 520px;
-    height: 650px;
-    flex: 0 0 520px;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
+/* No extra shape around photo */
+.hero-image-container::before,
+.hero-image-container::after {
+    content: none !important;
+    display: none !important;
 }
 
-/* PHOTO WITH BLUE GLOW */
+/* Transparent photo with blue outline glow */
 .hero-image-container img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center bottom;
 
-    background: transparent;
-    border: none;
-    border-radius: 0;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
 
     filter:
-        drop-shadow(0 0 12px rgba(0, 102, 255, 0.45))
-        drop-shadow(0 0 28px rgba(0, 102, 255, 0.35))
-        drop-shadow(0 0 50px rgba(0, 102, 255, 0.25));
+        drop-shadow(0 0 14px rgba(0, 102, 255, 0.42))
+        drop-shadow(0 0 32px rgba(0, 102, 255, 0.30))
+        drop-shadow(0 0 48px rgba(0, 102, 255, 0.18));
 
     animation: photoGlow 3s ease-in-out infinite alternate;
 }
 
-/* SOFT LIGHT ANIMATION */
 @keyframes photoGlow {
     from {
         filter:
-            drop-shadow(0 0 10px rgba(0, 102, 255, 0.3))
-            drop-shadow(0 0 25px rgba(0, 102, 255, 0.2));
+            drop-shadow(0 0 10px rgba(0, 102, 255, 0.28))
+            drop-shadow(0 0 24px rgba(0, 102, 255, 0.20));
     }
+
     to {
         filter:
-            drop-shadow(0 0 18px rgba(0, 102, 255, 0.6))
-            drop-shadow(0 0 40px rgba(0, 102, 255, 0.4));
+            drop-shadow(0 0 18px rgba(0, 102, 255, 0.55))
+            drop-shadow(0 0 40px rgba(0, 102, 255, 0.35));
     }
 }
-
-/* MOBILE */
-@media (max-width: 650px) {
-    .hero-image-container {
-        width: 280px;
-        height: 360px;
-        flex: none;
-    }
-}
-
-/* Outer Glow */
-
-.hero-image-container::before {
-    content: "";
-
-    position: absolute;
-    inset: -12px;
-
-    border-radius: 50%;
-    border: 2px dashed rgba(192, 132, 252, 0.5);
-
-    animation: rotate 15s linear infinite;
-}
-
-/* Profile Image */
-
-.hero-image-container img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    border-radius: 50%;
-    border: 6px solid var(--bg);
-
-    display: block;
-}
-
-
-/* Image Animation */
 
 @keyframes floating {
     0%, 100% {
@@ -420,39 +296,18 @@ nav a:hover::after {
     }
 
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-12px);
     }
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-/* =========================================
-   8. COMMON SECTION HEADINGS
-========================================= */
-
+/* 8. COMMON SECTION HEADINGS */
 section > h2 {
     text-align: center;
-
     font-size: 38px;
     font-weight: 700;
-
     margin-bottom: 55px;
 
-    background: linear-gradient(
-        90deg,
-        #c084fc,
-        #22d3ee
-    );
-
+    background: linear-gradient(90deg, #c084fc, #22d3ee);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -460,120 +315,122 @@ section > h2 {
 
 section > h2::after {
     content: "";
-
     display: block;
-
     width: 75px;
     height: 4px;
-
     margin: 13px auto 0;
-
     background: var(--gradient);
     border-radius: 20px;
 }
 
+/* 9. ABOUT SECTION */
+#about {
+    width: 84%;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    padding: 55px 50px;
 
-/* =========================================
-   9. SKILLS SECTION
-========================================= */
+    background: linear-gradient(
+        135deg,
+        rgba(13, 20, 40, 0.96),
+        rgba(7, 11, 24, 0.96)
+    );
 
+    border-left: 4px solid var(--blue);
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.10);
+    color: var(--text);
+}
+
+#about h2 {
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+#about h2::after {
+    margin: 12px 0 0;
+}
+
+#about p {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.15px;
+    text-align: left;
+}
+
+/* 10. SKILLS SECTION */
 #skills {
     background: var(--bg-light);
 }
 
 #skills ul {
     list-style: none;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(180px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 25px;
 }
 
 #skills li {
     position: relative;
-
     background: var(--card);
-
     border: 1px solid var(--border);
     border-radius: 18px;
-
     padding: 30px 20px;
-
     text-align: center;
-
     overflow: hidden;
-
     transition: all 0.35s ease;
 }
 
 #skills li::before {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 3px;
-
     background: var(--gradient);
 }
 
 #skills li:hover {
-    transform: translateY(-10px);
-
+    transform: translateY(-8px);
     border-color: var(--purple);
-
-    box-shadow:
-        0 12px 35px rgba(147, 51, 234, 0.2);
+    box-shadow: 0 12px 35px rgba(147, 51, 234, 0.2);
 }
 
 #skills li img {
     width: 100px;
     height: 100px;
-
     object-fit: contain;
-
     margin-bottom: 18px;
-
     transition: 0.4s;
 }
 
 #skills li:hover img {
-    transform: scale(1.12);
+    transform: scale(1.1);
 }
 
 #skills li span {
     display: block;
-
     color: var(--white);
-
     font-size: 17px;
     font-weight: 600;
 }
 
-
-/* =========================================
-   10. CODING PROFILES
-========================================= */
-
+/* 11. CODING PROFILES
+   Matches your current id="learning coding" */
 #learning\ coding {
     text-align: center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(147, 51, 234, 0.12),
-            transparent 55%
-        );
+    background: radial-gradient(
+        circle at center,
+        rgba(147, 51, 234, 0.12),
+        transparent 55%
+    );
 }
 
 #learning\ coding h3 {
     color: var(--purple-light);
-
     font-size: 30px;
     margin-bottom: 30px;
 }
@@ -581,50 +438,34 @@ section > h2::after {
 #learning\ coding img {
     width: 120px;
     height: 120px;
-
     object-fit: contain;
-
     display: block;
     margin: 0 auto 25px;
-
-    border-radius: 20px;
-
+    border-radius: 12px;
     transition: 0.3s;
 }
 
 #learning\ coding img:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 #learning\ coding a {
     display: inline-block;
-
     padding: 13px 35px;
-
     background: var(--gradient);
-
     color: white;
     text-decoration: none;
-
     border-radius: 50px;
-
     font-weight: 600;
-
     transition: 0.3s;
 }
 
 #learning\ coding a:hover {
     transform: translateY(-5px);
-
-    box-shadow:
-        0 8px 25px rgba(147, 51, 234, 0.4);
+    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
 }
 
-
-/* =========================================
-   11. EDUCATION SECTION
-========================================= */
-
+/* 12. EDUCATION SECTION */
 #educations {
     background: var(--bg-light);
 }
@@ -632,18 +473,14 @@ section > h2::after {
 #educations h3 {
     font-size: 21px;
     font-weight: 600;
-
     color: var(--purple-light);
-
     margin-bottom: 12px;
 }
 
 #educations h4 {
     color: #e2e8f0;
-
     font-size: 15px;
     font-weight: 500;
-
     margin-bottom: 12px;
 }
 
@@ -654,151 +491,106 @@ section > h2::after {
 
 #educations p {
     position: relative;
-
     background: var(--card);
-
     border: 1px solid var(--border);
     border-left: 4px solid var(--purple);
-
     border-radius: 12px;
-
     padding: 20px 25px;
-
     color: var(--muted);
-
     font-size: 14px;
-
     margin-bottom: 40px;
-
     transition: 0.3s;
 }
 
 #educations p:hover {
     border-left-color: var(--cyan);
-
-    transform: translateX(7px);
-
-    box-shadow:
-        0 8px 25px rgba(59, 130, 246, 0.12);
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.12);
 }
 
-
-/* =========================================
-   12. PROJECTS SECTION
-========================================= */
-
+/* 13. PROJECTS SECTION */
 #projects {
     background: var(--bg);
 }
 
 #projects > div {
     position: relative;
-
     background: var(--card);
-
     border: 1px solid var(--border);
     border-radius: 18px;
-
     padding: 35px;
-
     margin-bottom: 30px;
-
     overflow: hidden;
-
     transition: all 0.35s ease;
 }
 
 #projects > div::before {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
-
     height: 3px;
     width: 100%;
-
     background: var(--gradient);
 }
 
 #projects > div:hover {
-    transform: translateY(-9px);
-
+    transform: translateY(-8px);
     border-color: var(--purple);
-
-    box-shadow:
-        0 15px 40px rgba(147, 51, 234, 0.16);
+    box-shadow: 0 15px 40px rgba(147, 51, 234, 0.16);
 }
 
 #projects h3 {
     font-size: 23px;
     color: var(--purple-light);
-
     margin-bottom: 12px;
 }
 
 #projects p {
     font-size: 15px;
     color: var(--muted);
-
     margin-bottom: 22px;
 }
 
 #projects a {
     display: inline-block;
-
     color: var(--cyan);
-
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-
+    margin-right: 15px;
     transition: 0.3s;
 }
 
 #projects a:hover {
     color: var(--purple-light);
-
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
-
-/* =========================================
-   13. CONTACT SECTION
-========================================= */
-
+/* 14. CONTACT SECTION */
 #contact {
     text-align: center;
-
     background: var(--bg-light);
 }
 
 .linkedin-link,
 .github-link {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 10px;
-
     padding: 13px 28px;
     margin: 10px;
-
     border-radius: 50px;
-
     text-decoration: none;
-
     font-size: 14px;
     font-weight: 600;
-
     transition: 0.3s;
 }
 
 .linkedin-link {
     background: #0a66c2;
     color: white;
-
     box-shadow: 0 5px 20px rgba(10, 102, 194, 0.2);
 }
 
@@ -810,120 +602,86 @@ section > h2::after {
 .github-link {
     background: #202938;
     color: white;
-
     border: 1px solid #475569;
 }
 
 .github-link:hover {
     background: #9333ea;
     border-color: #9333ea;
-
     transform: translateY(-5px);
 }
 
-
-/* SHARE BUTTON */
-
 #shareButton {
     display: inline-block;
-
     padding: 13px 32px;
     margin: 15px;
-
     border: none;
     border-radius: 50px;
-
     background: var(--gradient);
-
     color: white;
-
     font-size: 14px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
 #shareButton:hover {
     transform: translateY(-5px);
-
-    box-shadow:
-        0 8px 25px rgba(147, 51, 234, 0.4);
+    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
 }
 
-
-/* =========================================
-   14. FOOTER
-========================================= */
-
+/* 15. FOOTER */
 footer {
     background: #040713;
-
     padding: 30px 15px;
-
     text-align: center;
-
     border-top: 1px solid var(--border);
 }
 
 footer p {
     color: var(--muted);
-
     font-size: 13px;
     margin: 5px;
 }
 
-
-/* =========================================
-   15. TABLET RESPONSIVE
-========================================= */
-
-@media (max-width: 900px) {
-
+/* 16. TABLET RESPONSIVE */
+@media (max-width: 1000px) {
     section {
         padding: 80px 7%;
     }
 
     #home {
-        gap: 35px;
+        gap: 25px;
     }
 
     .hero-image-container {
-        flex-basis: 270px;
-        width: 270px;
-        height: 270px;
+        flex-basis: 390px;
+        width: 390px;
+        height: 500px;
     }
 
     .home-content h1 {
-        font-size: 42px;
+        font-size: clamp(34px, 5vw, 46px);
     }
 
     nav {
-        gap: 20px;
+        gap: 22px;
     }
-
 }
 
-
-/* =========================================
-   16. MOBILE RESPONSIVE
-========================================= */
-
-@media (max-width: 650px) {
-
+/* 17. MOBILE RESPONSIVE */
+@media (max-width: 700px) {
     nav {
         justify-content: flex-start;
-
+        flex-wrap: nowrap;
         gap: 22px;
-
-        padding: 16px 20px;
-
+        padding: 15px 20px;
         overflow-x: auto;
         white-space: nowrap;
     }
 
     nav a {
+        flex: 0 0 auto;
         font-size: 13px;
     }
 
@@ -933,23 +691,21 @@ footer p {
 
     #home {
         flex-direction: column-reverse;
-
         text-align: center;
-
         min-height: auto;
-
-        padding-top: 65px;
-        padding-bottom: 75px;
-
-        gap: 45px;
+        padding-top: 45px;
+        padding-bottom: 65px;
+        gap: 25px;
     }
 
     .home-content {
         width: 100%;
+        max-width: 100%;
+        flex: auto;
     }
 
     .home-content h1 {
-        font-size: 34px;
+        font-size: clamp(30px, 8vw, 40px);
     }
 
     .home-content h2 {
@@ -959,21 +715,19 @@ footer p {
 
     .home-content p {
         font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .home-buttons {
-        justify-content: center;
-    }
-
+    .home-buttons,
     .social-links {
         justify-content: center;
     }
 
     .hero-image-container {
         flex: none;
-
-        width: 230px;
-        height: 230px;
+        width: min(310px, 78vw);
+        height: min(390px, 98vw);
     }
 
     section > h2 {
@@ -981,8 +735,24 @@ footer p {
         margin-bottom: 40px;
     }
 
+    /* ABOUT MOBILE */
+    #about {
+        width: 90%;
+        padding: 32px 23px;
+        margin-bottom: 35px;
+    }
+
+    #about h2 {
+        font-size: 28px;
+    }
+
+    #about p {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
     #skills ul {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 15px;
     }
 
@@ -1023,23 +793,17 @@ footer p {
     #projects p {
         font-size: 13px;
     }
-
 }
 
-
-/* =========================================
-   17. SMALL MOBILE
-========================================= */
-
+/* 18. SMALL MOBILE */
 @media (max-width: 380px) {
-
     .home-content h1 {
         font-size: 29px;
     }
 
     .hero-image-container {
-        width: 190px;
-        height: 190px;
+        width: 240px;
+        height: 310px;
     }
 
     .primary-btn,
@@ -1049,18 +813,16 @@ footer p {
     }
 
     #skills ul {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    #about {
+        padding: 25px 18px;
+    }
 }
 
-
-/* =========================================
-   18. REDUCED MOTION ACCESSIBILITY
-========================================= */
-
+/* 19. REDUCED MOTION ACCESSIBILITY */
 @media (prefers-reduced-motion: reduce) {
-
     *,
     *::before,
     *::after {
@@ -1069,97 +831,4 @@ footer p {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-
-}
-/* SIDE LIGHT GLOW EFFECT */
-
-.hero-image-container {
-    position: relative;
-    isolation: isolate;
-}
-
-/* LEFT SIDE LIGHT */
-
-.hero-image-container::before {
-    content: "";
-    position: absolute;
-
-    top: 15%;
-    left: -35px;
-
-    width: 60px;
-    height: 70%;
-
-    background: #9333ea;
-    filter: blur(45px);
-
-    opacity: 0.6;
-    z-index: -1;
-
-    animation: sideGlow 3s ease-in-out infinite alternate;
-}
-
-/* RIGHT SIDE LIGHT */
-
-.hero-image-container::after {
-    content: "";
-    position: absolute;
-
-    top: 15%;
-    right: -35px;
-
-    width: 60px;
-    height: 70%;
-
-    background: #22d3ee;
-    filter: blur(45px);
-
-    opacity: 0.6;
-    z-index: -1;
-
-    animation: sideGlow 3s ease-in-out infinite alternate-reverse;
-}
-
-/* FLASHING ANIMATION */
-
-@keyframes sideGlow {
-    0% {
-        opacity: 0.2;
-        filter: blur(35px);
-    }
-
-    50% {
-        opacity: 0.8;
-        filter: blur(50px);
-    }
-
-    100% {
-        opacity: 0.35;
-        filter: blur(40px);
-    }
-}
-
-.hero-image-container {
-    background: transparent !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-}
-
-.hero-image-container img {
-    background: transparent !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-
-    filter:
-        drop-shadow(0 0 15px rgba(0, 100, 255, 0.45))
-        drop-shadow(0 0 35px rgba(0, 100, 255, 0.35));
-
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
