@@ -1,3 +1,4 @@
+
 // =========================
 // WELCOME MESSAGE
 // =========================
@@ -9,7 +10,7 @@ console.log("Welcome to Anchal's Portfolio!");
 // PROJECT BUTTON
 // =========================
 
-let projectButton = document.getElementById("projectButton");
+const projectButton = document.getElementById("projectButton");
 
 if (projectButton) {
     projectButton.addEventListener("click", function () {
@@ -22,16 +23,12 @@ if (projectButton) {
 // NAVBAR LINKS
 // =========================
 
-let navLinks = document.querySelectorAll("nav a");
+const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach(function (link) {
-
     link.addEventListener("click", function () {
-
         console.log("Navigation link clicked:", link.textContent);
-
     });
-
 });
 
 
@@ -40,47 +37,56 @@ navLinks.forEach(function (link) {
 // =========================
 
 window.addEventListener("load", function () {
-
     console.log("Portfolio loaded successfully!");
-
 });
+
+
+// =========================
 // DARK MODE
+// =========================
 
-let themeButton = document.getElementById("themeButton");
+const themeButton = document.getElementById("themeButton");
 
-themeButton.addEventListener("click", function () {
+if (themeButton) {
+    themeButton.addEventListener("click", function () {
 
-    document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("dark-mode");
 
-    if (document.body.classList.contains("dark-mode")) {
-        themeButton.textContent = "☀️ Light Mode";
-    } else {
-        themeButton.textContent = "🌙 Dark Mode";
-    }
-
-});
-let shareButton = document.getElementById("shareButton");
-
-shareButton.addEventListener("click", async function () {
-
-    if (navigator.share) {
-
-        try {
-
-            await navigator.share({
-                title: "Anchal's Portfolio",
-                text: "Check out my portfolio website!",
-                url: window.location.href
-            });
-
-        } catch (error) {
-            console.log("Sharing cancelled.");
+        if (document.body.classList.contains("dark-mode")) {
+            themeButton.textContent = "☀️ Light Mode";
+        } else {
+            themeButton.textContent = "🌙 Dark Mode";
         }
 
-    } else {
+    });
+}
 
-        alert("Share feature is not supported on this browser.");
 
-    }
+// =========================
+// SHARE BUTTON
+// =========================
 
-});
+const shareButton = document.getElementById("shareButton");
+
+if (shareButton) {
+    shareButton.addEventListener("click", async function () {
+
+        const shareData = {
+            title: "Anchal's Portfolio",
+            text: "Check out my portfolio website!",
+            url: window.location.href
+        };
+
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+            } else {
+                await navigator.clipboard.writeText(shareData.url);
+                alert("Portfolio link copied!");
+            }
+        } catch (error) {
+            console.log("Sharing cancelled or unavailable.");
+        }
+
+    });
+}
