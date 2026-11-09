@@ -123,22 +123,35 @@ section h2 {
 }
 
 /* ========== SKILLS ========== */
+/* =========================
+   SKILLS
+========================= */
+
 #skills {
-    background-color: #eef2ff;
+    background-color: #f5f7fa;
 }
 
 #skills ul {
-    max-width: 600px;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
     list-style: none;
 }
 
 #skills li {
     background-color: white;
-    margin: 12px 0;
-    padding: 14px;
+    padding: 15px 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#skills li:hover {
+    transform: translateY(-8px);
 }
 
 /* ========== LEARNING CODING ========== */
