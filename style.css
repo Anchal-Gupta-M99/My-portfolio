@@ -1,5 +1,6 @@
 
 /* ========== GENERAL RESET ========== */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +21,7 @@ body {
 }
 
 /* ========== NAVBAR ========== */
+
 nav {
     background-color: #170451;
     padding: 15px 20px;
@@ -45,6 +47,7 @@ nav a:hover {
 }
 
 /* ========== COMMON SECTION ========== */
+
 section {
     min-height: 80vh;
     padding: 70px 10%;
@@ -58,59 +61,134 @@ section h2 {
     font-size: 30px;
 }
 
-/* ========== HOME ========== */
+/* ========== HOME SECTION ========== */
+
 #home {
-    background-color: #eef2ff;
+    min-height: 90vh;
+    min-height: 90svh;
+    padding: clamp(35px, 6vw, 80px);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(25px, 4vw, 60px);
+
+    background:
+        radial-gradient(
+            circle at 75% 55%,
+            rgba(0, 90, 255, 0.35),
+            transparent 40%
+        ),
+        linear-gradient(120deg, #020617, #080d1b, #000000);
+
+    color: white;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.home-content {
+    flex: 1 1 350px;
+    min-width: 0;
+    max-width: 650px;
+}
+
+.home-content h1 {
+    color: white;
+    font-size: clamp(28px, 4vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.home-content h2 {
+    color: #1685ff;
+    font-size: clamp(22px, 2.5vw, 34px);
+    margin-bottom: 20px;
+}
+
+.home-content p {
+    color: #d1d5db;
+    font-size: clamp(14px, 1.5vw, 18px);
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* HOME BUTTONS */
+
+.home-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.home-buttons a {
+    display: inline-block;
+    padding: 12px clamp(15px, 2vw, 24px);
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(13px, 1.2vw, 16px);
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #087cff;
+    color: white;
+}
+
+.secondary-btn {
+    border: 2px solid #087cff;
+    color: #1685ff;
+}
+
+.home-buttons a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(0, 124, 255, 0.4);
+}
+
+/* SOCIAL LINKS */
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #60a5fa;
+    text-decoration: none;
+    border: 1px solid #1685ff;
+    padding: 9px 15px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #087cff;
+    color: white;
+}
+
+/* HOME PROFILE PHOTO */
+
+.home-image {
+    flex: 0 1 clamp(230px, 35vw, 390px);
+    min-width: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    text-align: center;
 }
 
-#home h1 {
-    color: blueviolet;
-    font-size: 38px;
-    margin-bottom: 10px;
-}
-
-#home h2 {
-    color: #2563eb;
-    font-size: 25px;
-}
-
-#home p {
-    margin: 15px 0;
-}
-
-#home img {
-    width: 230px;
-    height: 230px;
+#home .home-image img {
+    width: 100%;
+    height: clamp(300px, 40vw, 470px);
     object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #2563eb;
-}
-
-/* Home button */
-#home button {
-    background-color: #2563eb;
-    color: white;
-    padding: 12px 24px;
+    object-position: center top;
+    border-radius: 20px;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-top: 15px;
-}
-
-#home button:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-3px);
+    box-shadow: 0 0 45px rgba(0, 100, 255, 0.35);
 }
 
 /* ========== ABOUT ========== */
+
 #about {
     background-color: white;
 }
@@ -123,9 +201,6 @@ section h2 {
 }
 
 /* ========== SKILLS ========== */
-/* =========================
-   SKILLS
-========================= */
 
 #skills {
     background-color: #f5f7fa;
@@ -142,7 +217,7 @@ section h2 {
 
 #skills li {
     background-color: white;
-    padding: 15px 30px;
+    padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-weight: bold;
@@ -150,17 +225,25 @@ section h2 {
     cursor: pointer;
 }
 
+#skills li img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
 #skills li:hover {
     transform: translateY(-8px);
 }
 
 /* ========== LEARNING CODING ========== */
+
 #learning-coding {
     background-color: white;
     text-align: center;
 }
 
 /* ========== EDUCATION ========== */
+
 #educations {
     background-color: #eef2ff;
 }
@@ -175,6 +258,7 @@ section h2 {
 }
 
 /* ========== PROJECTS ========== */
+
 #projects {
     background-color: white;
 }
@@ -185,7 +269,12 @@ section h2 {
     margin: 20px auto;
     max-width: 750px;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+#projects > div:hover {
+    transform: translateY(-5px);
 }
 
 #projects h3 {
@@ -209,6 +298,7 @@ section h2 {
 }
 
 /* ========== CONTACT ========== */
+
 #contact {
     background-color: #eef2ff;
     text-align: center;
@@ -228,7 +318,8 @@ section h2 {
     text-decoration: underline;
 }
 
-/* GitHub link */
+/* GITHUB LINK */
+
 .github-link {
     background-color: white;
     color: #2563eb;
@@ -238,7 +329,8 @@ section h2 {
     display: inline-block;
 }
 
-/* Share button and theme button */
+/* SHARE AND DARK MODE BUTTONS */
+
 #shareButton,
 #themeButton {
     background-color: #2563eb;
@@ -258,6 +350,7 @@ section h2 {
 }
 
 /* ========== FOOTER ========== */
+
 footer {
     background-color: #170451;
     color: white;
@@ -266,6 +359,7 @@ footer {
 }
 
 /* ========== DARK MODE ========== */
+
 body.dark-mode {
     background-color: #111827;
     color: #f9fafb;
@@ -276,7 +370,10 @@ body.dark-mode footer {
     background-color: #030712;
 }
 
-body.dark-mode #home,
+body.dark-mode #home {
+    color: white;
+}
+
 body.dark-mode #about,
 body.dark-mode #educations,
 body.dark-mode #contact,
@@ -306,9 +403,12 @@ body.dark-mode section h2 {
     color: #60a5fa;
 }
 
-body.dark-mode #home h1,
+body.dark-mode #home h1 {
+    color: white;
+}
+
 body.dark-mode #home h2 {
-    color: #93c5fd;
+    color: #60a5fa;
 }
 
 body.dark-mode #projects h3,
@@ -320,59 +420,153 @@ body.dark-mode #contact a {
     color: #93c5fd;
 }
 
-/* ========== TABLET AND MOBILE ========== */
-@media screen and (max-width: 768px) {
-    nav {
-        gap: 12px;
-        padding: 12px;
+/* ========== TABLET ========== */
+
+@media screen and (max-width: 900px) {
+
+    #home {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 55px 6%;
+        gap: 35px;
     }
 
-    nav a {
-        font-size: 14px;
+    .home-content {
+        width: 100%;
+        max-width: 650px;
+        flex: 0 1 auto;
+    }
+
+    .home-buttons,
+    .social-links {
+        justify-content: center;
+    }
+
+    .home-image {
+        width: min(100%, 330px);
+        flex: 0 1 auto;
+    }
+
+    #home .home-image img {
+        height: clamp(280px, 45vw, 380px);
     }
 
     section {
         padding: 50px 6%;
     }
-
-    #home {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    #home h1 {
-        font-size: 30px;
-    }
-
-    #home img {
-        width: 190px;
-        height: 190px;
-    }
 }
 
-/* ========== SMALL MOBILE ========== */
-@media screen and (max-width: 480px) {
+/* ========== MOBILE ========== */
+
+@media screen and (max-width: 600px) {
+
     nav {
         gap: 10px;
+        padding: 12px;
     }
 
     nav a {
-        font-size: 12px;
+        font-size: 13px;
+    }
+
+    #home {
+        padding: 45px 20px;
+        gap: 30px;
+    }
+
+    .home-content h1 {
+        font-size: clamp(27px, 7vw, 34px);
+    }
+
+    .home-content h2 {
+        font-size: 23px;
+    }
+
+    .home-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .home-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-buttons a {
+        width: min(100%, 250px);
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .home-image {
+        width: min(100%, 260px);
+    }
+
+    #home .home-image img {
+        width: 100%;
+        height: 300px;
+    }
+
+    section {
+        padding: 40px 20px;
     }
 
     section h2 {
         font-size: 25px;
     }
 
-    #home h1 {
-        font-size: 26px;
+    #skills ul {
+        justify-content: center;
     }
 
-    #home h2 {
-        font-size: 21px;
+    #skills li {
+        padding: 12px 15px;
+    }
+
+    #skills li img {
+        width: 100px;
     }
 
     #projects > div {
         padding: 15px;
+    }
+}
+
+/* ========== VERY SMALL MOBILE ========== */
+
+@media screen and (max-width: 360px) {
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    #home {
+        padding: 35px 15px;
+    }
+
+    .home-content h1 {
+        font-size: 26px;
+    }
+
+    .home-buttons a {
+        font-size: 13px;
+        padding: 11px 14px;
+    }
+
+    .home-image {
+        width: min(100%, 220px);
+    }
+
+    #home .home-image img {
+        height: 270px;
     }
 }
